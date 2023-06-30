@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Trivia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Create New Trivia</h1>
+
+    <form method="POST" action="{{ url_for('create_trivia') }}">
+        {{ form.hidden_tag() }}
+
+        <div>
+            {{ form.category.label }} {{ form.category(size=20) }}
+        </div>
+
+        <div>
+            {{ form.question.label }} {{ form.question(size=100) }}
+        </div>
+
+        <div>
+            {{ form.answer.label }} {{ form.answer(size=100) }}
+        </div>
+
+        <div>
+            {{ form.difficulty.label }} {{ form.difficulty() }}
+        </div>
+
+        <div>
+            <input type="submit" value="Create Trivia">
+        </div>
+    </form>
+
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>
+

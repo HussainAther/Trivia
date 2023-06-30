@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Welcome, {{ current_user.name }}!</h1>
+
+    <h2>Your Trivia Collections</h2>
+
+    {% if current_user.trivia %}
+        <ul>
+            {% for trivia in current_user.trivia %}
+                <li>{{ trivia.question }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You don't have any trivia collections yet.</p>
+    {% endif %}
+
+    <a href="{{ url_for('create_trivia') }}">Create New Trivia</a>
+
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
+
