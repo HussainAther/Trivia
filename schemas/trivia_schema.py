@@ -9,6 +9,7 @@ class TriviaSchema(ma.Schema):
     question = fields.Str(required=True)
     answer = fields.Str(required=True)
     limit = fields.Int()
+    difficulty = fields.Str()
 
 trivia_schema = TriviaSchema()
 trivia_schemas = TriviaSchema(many=True)

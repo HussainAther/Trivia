@@ -1,5 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
+from wtforms import StringField, TextAreaField, SelectField, SubmitField
+
 from wtforms.validators import DataRequired, Email, EqualTo, Length
 from .models import User
 
@@ -21,3 +22,9 @@ class RegistrationForm(FlaskForm):
             raise ValidationError('Email already registered.')
 
 
+class TriviaForm(FlaskForm):
+    category = StringField('Category', validators=[DataRequired()])
+    question = TextAreaField('Question', validators=[DataRequired()])
+    answer = TextAreaField('Answer', validators=[DataRequired()])
+    difficulty = SelectField('Difficulty', choices=[('easy', 'Easy'), ('medium', 'Medium'), ('hard', 'Hard')], validators=[DataRequired()])
+    submit = SubmitField('Submit')
