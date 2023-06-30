@@ -53,3 +53,11 @@ class Trivia(db.Model):
     user_id = db.Column(db.String(36), db.ForeignKey('user.id'), nullable=False)
     user = db.relationship('User', backref=db.backref('trivia', lazy=True))
 
+# Import the route handlers
+from routes.users import users_bp
+from routes.trivia import trivia_bp
+
+# Register the route blueprints
+app.register_blueprint(users_bp)
+app.register_blueprint(trivia_bp)
+
