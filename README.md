@@ -1,5 +1,7 @@
 # Trivia RESTful API
 
+Glitch link: https://glitch.com/edit/#!/foil-universal-revolve?path=README.md%3A1%3A0
+
 This project is a full-featured CRUD RESTful Web API for Trivia information. It allows users to register, log in, and manage collections of trivia questions and answers. The API is built using Flask and PostgreSQL as the database.
 
 ## Installation and Setup
