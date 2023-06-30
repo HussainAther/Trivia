@@ -14,16 +14,16 @@ This project is a full-featured CRUD RESTful Web API for Trivia information. It 
    cd trivia-api
    ```
 
-3. Create a virtual environment named `marvel-env`:
+3. Create a virtual environment named `trivia-env`:
    - For Windows:
      ```
-     python -m venv marvel-env
-     marvel-env\Scripts\activate
+     python -m venv trivia-env
+     trivia-env\Scripts\activate
      ```
    - For macOS/Linux:
      ```
-     python3 -m venv marvel-env
-     source marvel-env/bin/activate
+     python3 -m venv trivia-env
+     source trivia-env/bin/activate
      ```
 
 4. Install the required packages:
@@ -46,11 +46,11 @@ This project is a full-featured CRUD RESTful Web API for Trivia information. It 
 1. Activate the virtual environment:
    - For Windows:
      ```
-     marvel-env\Scripts\activate
+     trivia-env\Scripts\activate
      ```
    - For macOS/Linux:
      ```
-     source marvel-env/bin/activate
+     source trivia-env/bin/activate
      ```
 
 2. Start the Flask development server:
